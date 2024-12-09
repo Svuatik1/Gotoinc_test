@@ -1,0 +1,691 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ul li {
+  list-style: none;
+}
+body {
+  margin: 60px;
+}
+body nav {
+  padding: 15px 0;
+}
+body nav ul {
+  display: flex;
+}
+body nav ul li {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  padding-right: 2px;
+}
+body nav ul li a {
+  color: #93989c;
+}
+body nav ul li:last-child {
+  font-weight: 600;
+}
+body nav ul li:last-child a {
+  color: #34739d;
+}
+body main {
+  width: 100%;
+  gap: 50px;
+}
+body main .product-preview {
+  display: flex;
+  gap: 50px;
+}
+body main .product-preview .main-image-section {
+  width: 100%;
+}
+body main .product-preview .main-image-section .shoes-image {
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  min-height: 692px;
+  background-color: #f4f8fb;
+}
+body main .product-preview .main-image-section .shoes-image img {
+  margin: auto;
+}
+body main .product-preview .main-image-section .diff-shoes-images {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 102px;
+}
+body
+  main
+  .product-preview
+  .main-image-section
+  .diff-shoes-images
+  .diff-shoes-look {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f8fb;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+body
+  main
+  .product-preview
+  .main-image-section
+  .diff-shoes-images
+  .diff-shoes-look
+  img {
+  transition: 0.5s;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+body
+  main
+  .product-preview
+  .main-image-section
+  .diff-shoes-images
+  .diff-shoes-look
+  img:hover {
+  width: 90%;
+  height: 90%;
+}
+body
+  main
+  .product-preview
+  .main-image-section
+  .diff-shoes-images
+  .diff-shoes-look.selected {
+  border: 2px solid #34739d;
+}
+body
+  main
+  .product-preview
+  .main-image-section
+  .diff-shoes-images
+  .diff-shoes-look:hover {
+  cursor: pointer;
+}
+body main .product-preview .additional-info-section {
+  width: 100%;
+}
+body main .product-preview .additional-info-section .shoes-description {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000;
+}
+body main .product-preview .additional-info-section .shoes-price {
+  padding: 15px 0;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+}
+body main .product-preview .additional-info-section .shoes-color,
+body main .product-preview .additional-info-section .shoes-size {
+  padding-top: 20px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+body main .product-preview .additional-info-section .shoes-color span,
+body main .product-preview .additional-info-section .shoes-size span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+body main .product-preview .additional-info-section .shoes-color-img {
+  padding-top: 15px;
+  display: flex;
+  gap: 5px;
+}
+body main .product-preview .additional-info-section .shoes-color-img .img-card {
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  width: 100%;
+  height: 70px;
+  background-color: #f0f6fa;
+  display: flex;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card
+  img {
+  transition: 0.5s;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card
+  img:hover {
+  width: 100%;
+  height: 100%;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card:hover {
+  cursor: pointer;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card.selected {
+  border: 2px solid #34739d;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card--disabled {
+  border-radius: 8px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  background-color: rgba(197, 199, 202, 0.3);
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .shoes-color-img
+  .img-card--disabled
+  img {
+  opacity: 0.3;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+body main .product-preview .additional-info-section .size-table {
+  padding-top: 15px;
+  display: flex;
+  gap: 7px;
+}
+body main .product-preview .additional-info-section .size-table li {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+body main .product-preview .additional-info-section .size-table li.selected {
+  font-weight: 600;
+  color: #34739d;
+}
+body main .product-preview .additional-info-section .size-table:hover {
+  cursor: pointer;
+}
+body main .product-preview .additional-info-section .size-charts {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+body main .product-preview .additional-info-section .size-charts .size {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+body main .product-preview .additional-info-section .size-charts .size:hover {
+  cursor: pointer;
+  background-color: #f0f6fa;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .size-charts
+  .size.selected {
+  font-weight: 500;
+  border: 2px solid #000;
+  background-color: #f0f6fa;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .size-charts
+  .size--not-available {
+  border: 1px solid #000;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #000;
+  opacity: 0.3;
+  background-color: #93989c;
+}
+body main .product-preview .additional-info-section .size-guide-button {
+  padding-top: 5px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #51585f;
+  float: right;
+}
+body main .product-preview .additional-info-section .action-buttons {
+  padding-top: 70px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .add-button {
+  width: 100%;
+  min-height: 44px;
+  background-color: #fff200;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .add-button
+  img {
+  padding-top: 2px;
+  padding-right: 7px;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .add-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .like-button,
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .libra-button {
+  position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .like-button
+  img,
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .libra-button
+  img {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .like-button:hover,
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .libra-button:hover {
+  cursor: pointer;
+  background-color: #f0f6fa;
+}
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .libra-button,
+body
+  main
+  .product-preview
+  .additional-info-section
+  .action-buttons
+  .like-button {
+  border: none;
+}
+body main .product-preview .additional-info-section #open-modal {
+  background-color: rgba(0, 0, 0, 0);
+}
+body main .product-preview .additional-info-section #open-modal:hover {
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  body main .product-preview {
+    display: block;
+  }
+  body main .product-preview .main-image-section .shoes-image {
+    min-height: auto;
+  }
+  body main .product-preview .main-image-section .shoes-image img {
+    width: 100%;
+  }
+  body
+    main
+    .product-preview
+    .main-image-section
+    .diff-shoes-images
+    .diff-shoes-look {
+    width: 66px;
+    height: 66px;
+  }
+  body main .product-preview .additional-info-section .shoes-price {
+    padding: 0;
+  }
+  body
+    main
+    .product-preview
+    .additional-info-section
+    .shoes-color-img
+    .img-card
+    img,
+  body
+    main
+    .product-preview
+    .additional-info-section
+    .shoes-color-img
+    .img-card--disabled
+    img {
+    width: 100%;
+  }
+  body main .product-preview .additional-info-section .action-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 60px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+body .descr-area {
+  margin-top: 50px;
+}
+body .descr-area .description-section {
+  padding: 20px;
+  background-color: #f4f8fb;
+  border-radius: 12px;
+}
+body .descr-area .description-section .description-header {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+body .descr-area .description-section .description-header .description-button {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgba(0, 0, 0, 0);
+}
+body
+  .descr-area
+  .description-section
+  .description-header
+  .description-button:hover {
+  cursor: pointer;
+}
+body
+  .descr-area
+  .description-section
+  .description-header
+  .description-button--active {
+  font-weight: 700;
+  font-size: 16px;
+  color: #34739d;
+}
+body .descr-area .description-section .description-content {
+  padding-top: 20px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+body .descr-area .description-section .description-content .details tbody,
+body .descr-area .description-section .description-content .shipping tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .descr-area .description-section .description-content .details td,
+body .descr-area .description-section .description-content .shipping td {
+  min-width: 200px;
+}
+body
+  .descr-area
+  .description-section
+  .description-content
+  .details
+  td:first-child,
+body
+  .descr-area
+  .description-section
+  .description-content
+  .shipping
+  td:first-child {
+  font-weight: 700;
+}
+body .descr-area .description-section .description-content .size-guide h5 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+body
+  .descr-area
+  .description-section
+  .description-content
+  .size-guide__content {
+  display: flex;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  body
+    .descr-area
+    .description-section
+    .description-content
+    .size-guide__content {
+    flex-direction: column-reverse;
+  }
+}
+body
+  .descr-area
+  .description-section
+  .description-content
+  .size-guide__content
+  .img-container {
+  min-width: 350px;
+  display: flex;
+}
+body
+  .descr-area
+  .description-section
+  .description-content
+  .size-guide__content
+  img {
+  margin: auto;
+}
+body .descr-area .description-section .description-content .size-guide ol {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+body .descr-area .description-section hr {
+  width: 100%;
+  height: 0.5px;
+  background-color: #34739d;
+  opacity: 0.9;
+}
+body .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  body .modal-content {
+    width: 95%;
+  }
+}
+body .size-guide-modal {
+  padding-top: 5px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  float: right;
+}
+body .size-guide-modal .img-container {
+  display: flex;
+}
+body .size-guide-modal .img-container img {
+  margin: auto;
+}
+body .size-guide-modal .modal-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+body .size-guide-modal .modal-head button {
+  background-color: rgba(0, 0, 0, 0);
+}
+body .size-guide-modal .modal-head button:hover {
+  cursor: pointer;
+}
+body .size-guide-modal h5 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+body .size-guide-modal__content {
+  display: flex;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  body .size-guide-modal__content {
+    flex-direction: column-reverse;
+  }
+}
+body .size-guide-modal__content .img-container {
+  min-width: 350px;
+  display: flex;
+}
+body .size-guide-modal__content img {
+  margin: auto;
+}
+body .size-guide-modal ol {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  body {
+    margin: 40px;
+  }
+}

@@ -1,0 +1,607 @@
+$primary300: #93989c;
+$secondary600: #34739d;
+$neutral100: #f4f8fb;
+$primary800: #000000;
+$neutral200: #f0f6fa;
+$primary500: #51585f;
+$accent600: #fff200;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+body {
+  margin: 60px;
+
+  nav {
+    padding: 15px 0;
+
+    ul {
+      display: flex;
+
+      li {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        padding-right: 2px;
+
+        a {
+          color: $primary300;
+        }
+      }
+
+      li:last-child {
+        font-weight: 600;
+
+        a {
+          color: $secondary600;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    gap: 50px;
+
+    .product-preview {
+      display: flex;
+      gap: 50px;
+
+      .main-image-section {
+        width: 100%;
+
+        .shoes-image {
+          border-radius: 8px;
+          display: flex;
+          width: 100%;
+          min-height: 692px;
+          background-color: $neutral100;
+
+          img {
+            margin: auto;
+          }
+        }
+
+        .diff-shoes-images {
+          padding-top: 15px;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          height: 102px;
+
+          .diff-shoes-look {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            background-color: $neutral100;
+            display: flex;
+            border: 2px solid transparent;
+
+            img {
+              transition: 0.5s;
+              margin: auto;
+              width: 70%;
+              height: 70%;
+              object-fit: cover;
+              overflow: hidden;
+            }
+
+            img:hover {
+              width: 90%;
+              height: 90%;
+            }
+          }
+
+          .diff-shoes-look.selected {
+            border: 2px solid $secondary600;
+          }
+
+          .diff-shoes-look:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .additional-info-section {
+        width: 100%;
+
+        .shoes-description {
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 40px;
+          color: $primary800;
+        }
+
+        .shoes-price {
+          padding: 15px 0;
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: $primary800;
+        }
+
+        .shoes-color,
+        .shoes-size {
+          padding-top: 20px;
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: $primary800;
+
+          span {
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $primary800;
+          }
+        }
+
+        .shoes-color-img {
+          padding-top: 15px;
+          display: flex;
+          gap: 5px;
+
+          .img-card {
+            border: 2px solid transparent;
+            border-radius: 8px;
+            width: 100%;
+            height: 70px;
+            background-color: $neutral200;
+            display: flex;
+
+            img {
+              transition: 0.5s;
+              margin: auto;
+              width: 70%;
+              height: 70%;
+              object-fit: cover;
+              overflow: hidden;
+            }
+
+            img:hover {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .img-card:hover {
+            cursor: pointer;
+          }
+
+          .img-card.selected {
+            border: 2px solid $secondary600;
+          }
+
+          .img-card--disabled {
+            border-radius: 8px;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background-color: rgba($color: #c5c7ca40, $alpha: 0.3);
+
+            img {
+              opacity: 0.3;
+              margin: auto;
+              width: 70%;
+              height: 70%;
+              object-fit: cover;
+              overflow: hidden;
+            }
+          }
+        }
+
+        .size-table {
+          padding-top: 15px;
+          display: flex;
+          gap: 7px;
+
+          li {
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary800;
+          }
+
+          li.selected {
+            font-weight: 600;
+            color: $secondary600;
+          }
+        }
+
+        .size-table:hover {
+          cursor: pointer;
+        }
+
+        .size-charts {
+          padding-top: 15px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 10px;
+
+          .size {
+            border: 1px solid $primary800;
+            box-sizing: border-box;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            box-sizing: border-box;
+          }
+
+          .size:hover {
+            cursor: pointer;
+            background-color: $neutral200;
+          }
+
+          .size.selected {
+            font-weight: 500;
+            border: 2px solid $primary800;
+            background-color: $neutral200;
+          }
+
+          .size--not-available {
+            border: 1px solid $primary800;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            border: 1px solid $primary800;
+            opacity: 0.3;
+            background-color: $primary300;
+          }
+        }
+
+        .size-guide-button {
+          padding-top: 5px;
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: $primary500;
+          float: right;
+        }
+
+        .action-buttons {
+          padding-top: 70px;
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          justify-content: space-between;
+
+          .add-button {
+            width: 100%;
+            min-height: 44px;
+            background-color: $accent600;
+            border-radius: 5px;
+            font-family: "Inter";
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            position: relative;
+
+            img {
+              padding-top: 2px;
+              padding-right: 7px;
+            }
+          }
+
+          .add-button:hover {
+            cursor: pointer;
+            opacity: 0.5;
+          }
+
+          .like-button,
+          .libra-button {
+            position: relative;
+            min-width: 44px;
+            min-height: 44px;
+            background-color: transparent;
+            border: 1px solid $primary800;
+            border-radius: 5px;
+
+            img {
+              position: absolute;
+              top: 13px;
+              left: 10px;
+            }
+          }
+
+          .like-button:hover,
+          .libra-button:hover {
+            cursor: pointer;
+            background-color: $neutral200;
+          }
+
+          .libra-button,
+          .like-button {
+            border: none;
+          }
+        }
+
+        #open-modal {
+          background-color: transparent;
+        }
+
+        #open-modal:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .product-preview {
+        display: block;
+
+        .main-image-section {
+          .shoes-image {
+            min-height: auto;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .diff-shoes-images {
+            .diff-shoes-look {
+              width: 66px;
+              height: 66px;
+            }
+          }
+        }
+        .additional-info-section {
+          .shoes-price {
+            padding: 0;
+          }
+          .shoes-color-img {
+            .img-card,
+            .img-card--disabled {
+              img {
+                width: 100%;
+              }
+            }
+          }
+          .action-buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 0 60px;
+            background-color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .descr-area {
+    margin-top: 50px;
+
+    .description-section {
+      padding: 20px;
+      background-color: $neutral100;
+      border-radius: 12px;
+
+      .description-header {
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 20px;
+
+        .description-button {
+          font-family: "Inter";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          background-color: transparent;
+        }
+
+        .description-button:hover {
+          cursor: pointer;
+        }
+
+        .description-button--active {
+          font-weight: 700;
+          font-size: 16px;
+          color: $secondary600;
+        }
+      }
+
+      .description-content {
+        padding-top: 20px;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+
+        .details,
+        .shipping {
+          tbody {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          td {
+            min-width: 200px;
+          }
+
+          td:first-child {
+            font-weight: 700;
+          }
+        }
+
+        .size-guide {
+          h5 {
+            font-family: "Inter";
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 20px;
+          }
+
+          &__content {
+            display: flex;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            @media (max-width: 576px) {
+              flex-direction: column-reverse;
+            }
+
+            .img-container {
+              min-width: 350px;
+              display: flex;
+            }
+
+            img {
+              margin: auto;
+            }
+          }
+
+          ol {
+            padding-left: 20px;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      hr {
+        width: 100%;
+        height: 0.5px;
+        background-color: $secondary600;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media (max-width: 576px) {
+      width: 95%;
+    }
+  }
+
+  .size-guide-modal {
+    padding-top: 5px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    float: right;
+
+    .img-container {
+      display: flex;
+
+      img {
+        margin: auto;
+      }
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      button {
+        background-color: transparent;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+    }
+
+    h5 {
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
+
+    &__content {
+      display: flex;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      @media (max-width: 576px) {
+        flex-direction: column-reverse;
+      }
+
+      .img-container {
+        min-width: 350px;
+        display: flex;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+
+    ol {
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    margin: 40px;
+  }
+}

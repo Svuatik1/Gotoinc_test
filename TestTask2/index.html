@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unisex SportStyle Shoes</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home /</a></li>
+        <br />
+        <li><a href="#">Unisex Shoes /</a></li>
+        <br />
+        <li><a href="#">Unisex SportStyle Shoes</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="product-preview">
+        <div class="main-image-section">
+          <div class="shoes-image">
+            <img src="/assets/shoes.png" alt="shoes" />
+          </div>
+          <div>
+            <ul class="diff-shoes-images">
+              <li class="diff-shoes-look selected">
+                <img src="/assets/shoes-look-1.png" alt="shoes-look-1" />
+              </li>
+              <li class="diff-shoes-look">
+                <img src="/assets/shoes-look-2.png" alt="shoes-look-2" />
+              </li>
+              <li class="diff-shoes-look">
+                <img src="/assets/shoes-look-3.png" alt="shoes-look-3" />
+              </li>
+              <li class="diff-shoes-look">
+                <img src="/assets/shoes-look-4.png" alt="shoes-look-4" />
+              </li>
+              <li class="diff-shoes-look">
+                <img src="/assets/shoes-look-5.png" alt="shoes-look-5" />
+              </li>
+              <li class="diff-shoes-look">
+                <img src="/assets/shoes-look-6.png" alt="shoes-look-6" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="additional-info-section">
+          <p class="shoes-description">ASICS GEL-KAYANO 14</p>
+          <p class="shoes-price">$ 155.00</p>
+          <p class="shoes-color">Colour: <span>White/Tai Chi Yellow</span></p>
+          <ul class="shoes-color-img">
+            <li class="img-card--disabled">
+              <img src="/assets/shoes.png" alt="shoes-color-img-1" />
+            </li>
+            <li class="img-card">
+              <img src="/assets/shoes.png" alt="shoes-color-img-2" />
+            </li>
+            <li class="img-card--disabled">
+              <img src="/assets/shoes.png" alt="shoes-color-img-3" />
+            </li>
+            <li class="img-card--disabled">
+              <img src="/assets/shoes.png" alt="shoes-color-img-4" />
+            </li>
+            <li class="img-card">
+              <img src="/assets/shoes.png" alt="shoes-color-img-5" />
+            </li>
+          </ul>
+          <p class="shoes-size">Size: <span id="current-size">6.5 UK</span></p>
+          <ul class="size-table">
+           <!-- Handled in .js file -->
+          </ul>
+          <div class="size-charts">
+             <!-- Handled in .js file -->
+          </div>
+          <button id="open-modal" class="size-guide-button">Size guide</button>
+          <div class="action-buttons">
+            <button class="add-button">
+              <img src="/assets/icon/shop-icon.png" alt="shop-icon" />
+              Add to card
+            </button>
+            <button class="like-button">
+              <img src="/assets/icon/like-icon.png" alt="like-icon" />
+            </button>
+            <button class="libra-button">
+              <img src="/assets/icon/libra-icon.png" alt="libra-icon" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="descr-area">
+      <div class="description-section">
+        <ul class="description-header">
+          <button class="description-button description-button--active">
+            Description
+          </button>
+          <button class="description-button">Details</button>
+          <button class="description-button">Shipping</button>
+          <button class="description-button">Size guide</button>
+        </ul>
+        <hr />
+        <div class="description-content">
+          <div class="description">
+            The ASICS GEL-KAYANO 14 is a classic running shoe designed for
+            stability and support. Featuring <br />advanced GEL technology in
+            the midsole, this model offers superior shock absorption, making
+            it<br />suitable for long runs. The retro style pays homage to the
+            original 2008 design, combining both<br />performance and streetwear
+            appeal. Its durable rubber outsole, supportive structure, and<br />breathable
+            mesh upper make it ideal for runners who overpronate, ensuring
+            comfort and balance<br />during intense runs.
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="size-guide-modal">
+            <div class="modal-head">
+                <h1>Size Guide</h1>
+                <button id="close-modal">X</button>
+            </div>
+        <div> <h5>How to measure shoe size?</h5></div>
+         
+          <div class="size-guide-modal__content">
+            <div>
+              <p>
+                Follow the simple steps below to determine your shoe size. Make
+                sure you do this during or at the end of day to ensure the right
+                size (feet typically swell during the day).
+              </p>
+              <ol>
+                <li>
+                  Put a piece of blank paper under your feet. Stand up straight
+                  and have your heel lightly touching against the wall.
+                </li>
+                <li>
+                  Have someone mark the end of the longest toe and the back of
+                  your heel on the sheet with a pen or pencil. Afterwards
+                  measure the length of your feet from heel to toe.
+                </li>
+                <li>
+                  Repeat the steps for your other foot and compare it with our
+                  size chart below.
+                </li>
+              </ol>
+            </div>
+            <div class="img-container">
+              <img src="/assets/foot-image.png" alt="foot-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
